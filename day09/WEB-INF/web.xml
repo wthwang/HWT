@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	
+	
+		<servlet>
+		<servlet-name>BBSModify</servlet-name>
+		<servlet-class>BBSModifyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSModify</servlet-name>
+		<url-pattern>/bbs/modify</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>BBSModifyForm</servlet-name>
+		<servlet-class>BBSModifyFormServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSModifyForm</servlet-name>
+		<url-pattern>/bbs/modifyform</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>BBSDelete</servlet-name>
+		<servlet-class>BBSDeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSDelete</servlet-name>
+		<url-pattern>/bbs/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBSRead</servlet-name>
+		<servlet-class>BBSReadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSRead</servlet-name>
+		<url-pattern>/bbs/read</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBSRegister</servlet-name>
+		<servlet-class>BBSRegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSRegister</servlet-name>
+		<url-pattern>/bbs/bbsregister</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBSList</servlet-name>
+		<servlet-class>BBSListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBSList</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Delete</servlet-name>
+		<servlet-class>DeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Modify</servlet-name>
+		<servlet-class>ModifyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Modify</servlet-name>
+		<url-pattern>/modify</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>RegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+
