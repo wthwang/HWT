@@ -1,4 +1,3 @@
-stage:
 - stage: Build
   displayName: Build and push stage
   jobs:  
