@@ -1,15 +1,18 @@
-steps:
-- task: Docker@2
-  displayName: Login to ACR
-  inputs:
-    command: login
-    containerRegistry: devopsmanual-acr
-
-- task: Docker@2
-  displayName: Build and Push
-  inputs:
-    repository: $(imageName)
-    command: buildAndPush
-    Dockerfile: /Dockerfile
-    tags: |
-      $(tag)
+stage:
+- stage: Build
+  displayName: Build and push stage
+  jobs:  
+  - job: Build
+    displayName: Build job
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
