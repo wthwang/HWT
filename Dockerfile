@@ -10,6 +10,6 @@ steps:
   inputs:
     repository: $(imageName)
     command: buildAndPush
-    Dockerfile: build-docker-image/SampleAppForDocker/DOCKERFILE
+    Dockerfile: /Dockerfile
     tags: |
       $(tag)
