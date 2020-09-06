@@ -1,18 +1,8 @@
-stages:
-- stage: Build
-  displayName: Build and push stage
-  jobs:  
-  - job: Build
-    displayName: Build job
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: Docker@2
-      displayName: Build and push an image to container registry
-      inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+FROM centos:7                                
+LABEL "purpose"="practice"                         
+RUN yum update                                  
+RUN yum install -y httpd                     
+WORKDIR /var/www/html                              
+RUN ["/bin/bash", "-c", "echo hello >> test2.html"]  
+EXPOSE 80                                           
+CMD apachectl -DFOREGROUND                         
