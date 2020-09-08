@@ -1,5 +1,5 @@
 FROM centos:7                                
-LABEL "purpose"="practice"                         
+LABEL "day09"="day09"                         
 RUN yum update                                  
 RUN yum install -y httpd                     
 WORKDIR /var/www/html
