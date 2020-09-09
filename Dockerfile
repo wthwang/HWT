@@ -5,6 +5,5 @@ RUN yum install -y httpd
 WORKDIR /var/www/html
 COPY day09/* /var/www/html/
 RUN ["/bin/bash", "-c", "echo hello >> test2.html"] 
-RUN systemctl restart httpd
 EXPOSE 80                                           
-CMD apachectl -DFOREGROUND                         
+CMD systemctl restart httpd -DFOREGROUND                         
