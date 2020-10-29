@@ -1,4 +1,4 @@
-FROM centos:7.5.1804
+FROM centos:7
 RUN yum -y install httpd
 ADD entry-point.sh /etc/entry-point.sh
 RUN chmod 755 /etc/entry-point.sh
